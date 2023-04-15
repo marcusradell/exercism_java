@@ -1,4 +1,8 @@
+
+
 public class Lasagna {
+    static int layerPreparationTime = 2;
+
     public int expectedMinutesInOven() {
         return 40;
     }
@@ -7,7 +11,11 @@ public class Lasagna {
         return expectedMinutesInOven() - minutesInOven;
     }
 
-    // TODO: define the 'preparationTimeInMinutes()' method
+    public int preparationTimeInMinutes(int layers) {
+        return layers * layerPreparationTime;
+    }
 
-    // TODO: define the 'totalTimeInMinutes()' method
+    public int totalTimeInMinutes(int layers, int minutesInOven) {
+        return preparationTimeInMinutes(layers) + minutesInOven;
+    }
 }
